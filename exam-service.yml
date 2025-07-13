@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: exam-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/exam_db
+    username: root
+    password: ironfish54
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+kafka:
+  bootstrap-servers: localhost:9092
