@@ -3,17 +3,22 @@ server:
 
 spring:
   application:
-    name: question-service
+    name: exam-service
 
   datasource:
     url: jdbc:mysql://localhost:3306/question_db
     username: root
-    password: ironfish54
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+  kafka:
+    bootstrap-servers: localhost:9092
 
 eureka:
   client:
